@@ -1,0 +1,18 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2021"
+default-run = "teacher-service"
+
+[dependencies]
+actix-web = "4.9.0"
+actix-rt = "2.10.0"
+serde = { version = "1.0.208", features = ["derive"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+dotenv = "0.15.0"
+sqlx = { version = "0.8.0", features = ["postgres","runtime-tokio-rustls","macros","chrono"] }
+#openssl = { version = "0.10.66", features = ["vendored"] }
+
+
+[[bin]]
+name="teacher-service"
